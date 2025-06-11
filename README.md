@@ -81,7 +81,7 @@ This lab demonstrates the deployment and configuration of an Active Directory en
 ### 5. Applying Group Policy for Desktop Wallpaper Enforcement  
 ![Screenshot 2025-05-31 140323](https://github.com/user-attachments/assets/522b8720-7da6-4909-a356-355a3144caba)  
 
-**How to configure:**  
+**Steps:**  
 - Open **Group Policy Management** on the DC.  
 - Right-click on the OU with target users > **Create a GPO in this domain, and Link it here**.  
 - Name it (Wallpaper Dekstop) and click **OK**.  
@@ -97,11 +97,11 @@ This lab demonstrates the deployment and configuration of an Active Directory en
 ![Screenshot 2025-05-31 150330](https://github.com/user-attachments/assets/bd389de9-6bd6-4e83-8cac-79139a675f39)  
 ![Screenshot 2025-05-31 150736](https://github.com/user-attachments/assets/b5f22c86-643c-4475-893a-8ac1804882d3)  
 
-**Steps:**  
-- Log into the client machine with a local admin or domain admin.  
-- Go to **System Properties** > Remote tab > Select Users.  
-- Click **Add**, then add `Domain Users` or the specific group needing RDP access.  
-- Domain users should now be able to RDP into the VM.  
+**Steps:**   
+- Log into the client with a domain user account.  
+- Open Command Prompt and run: `gpresult /r`.  
+- Verify the correct GPO is applied.  
+- Confirm wallpaper, Task Manager restrictions, or other policy effects, you can do this by also attempting to open them to find  that the system will block that action.  
 
 ### 7. Troubleshooting Remote Desktop Access for Domain Users  
 ![Access Denied - RDP](https://github.com/user-attachments/assets/a39aedec-02db-4b9b-b297-7d42454df0a8)  
